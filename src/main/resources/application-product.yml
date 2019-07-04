@@ -1,0 +1,20 @@
+dubbo:
+  ## Base packages to scan Dubbo Component：@com.alibaba.dubbo.config.annotation.Service
+  scan:
+    basePackages: com.comma.fit
+  ## ApplicationConfig Bean
+  consumer:
+    loadbalance: roundrobin
+    timeout: 60000
+    check: false
+    retries: -1
+  application:
+    id: authentication-dubbo
+    name: authentication-dubbo
+    qos-enable: false
+  ## RegistryConfig Bean
+  registry:
+    id: edas
+    #address: edas://jmenv.tbsite.net:8080
+    address: zookeeper://172.16.0.117:2181
+
